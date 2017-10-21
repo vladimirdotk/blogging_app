@@ -12,9 +12,9 @@
                 <div class="post-date">{{ post.created_date }}</div>
                 <br>
                 <div class="post-preview">
-                    {{ post.preview }}
-                    <a class="read-next" href="{{ post.get_absolute_url }}">Читать далее</a>
+                    {{ post.preview|safe }}
                 </div>
+                <a class="post-read-all" href="{{ post.get_absolute_url }}">Читать далее</a>
             </div>
         {% empty %}
             <div>Заметок пока нет</div>

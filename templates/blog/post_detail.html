@@ -8,7 +8,9 @@
         <h2 class="post-header">{{ object.title }}</h2>
         <div class="post-date">{{ object.created_date }}</div>
         <br>
-        <div class="post-body">{{ object.body }}</div>
+        <div class="post-body">
+            {{ object.body|safe }}
+        </div>
     </div>
 
 {% endblock %}

@@ -16,10 +16,7 @@
     color: #333;
 }
 
-.read-next, .post-detail-back {
+.post-read-all, .post-detail-back {
     text-decoration: underline;
-}
-
-.post-detail-back {
     font-size: 18px;
 }

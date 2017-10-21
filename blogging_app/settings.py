@@ -25,7 +25,7 @@ SECRET_KEY = '_q-7j^=)t_n%w+m4snyw7&!adj3acvvc(swothj=(5=ii#-v90'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['smart.ddns.is74.ru', 'localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
