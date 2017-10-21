@@ -3,7 +3,7 @@ from .models import Post, Tag
 
 
 class PostAdmin(admin.ModelAdmin):
-    fields = ['created_date', 'title', 'slug', 'preview', 'body', 'tags']
+    fields = ['title', 'slug', 'preview', 'body', 'tags']
 
 
 admin.site.register(Post, PostAdmin)

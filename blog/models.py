@@ -26,7 +26,7 @@ class Post(models.Model):
     preview = models.TextField('предпросмотр')
     body = models.TextField('заметка')
     created_date = models.DateTimeField(
-        null=False, blank=False, verbose_name='дата создания', default=datetime.now
+        null=False, blank=False, verbose_name='дата создания', auto_now_add=True
     )
     tags = models.ManyToManyField(Tag, verbose_name='тэг')
 
