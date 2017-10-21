@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 from django.utils.timezone import datetime
 
 
@@ -25,12 +26,15 @@ class Post(models.Model):
     preview = models.TextField('предпросмотр')
     body = models.TextField('заметка')
     created_date = models.DateTimeField(
-        null=False, blank=False, verbose_name='дата создания', default=datetime.now()
+        null=False, blank=False, verbose_name='дата создания', default=datetime.now
     )
     tags = models.ManyToManyField(Tag, verbose_name='тэг')
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('post-detail', kwargs={'slug': self.slug})
 
     class Meta:
         verbose_name = 'запись'

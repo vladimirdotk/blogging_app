@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from blog.views import PostList, PostDetail
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', PostList.as_view(), name='post-list'),
+    url(r'^(?P<slug>[-\w]+)/$', PostDetail.as_view(), name='post-detail'),
 ]
