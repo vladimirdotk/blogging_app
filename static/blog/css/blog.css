@@ -1,0 +1,25 @@
+.post {
+    margin-bottom: 40px;
+}
+
+.post-preview, .post-body {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.post-date {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.post-header, .post-header-link {
+    color: #333;
+}
+
+.read-next, .post-detail-back {
+    text-decoration: underline;
+}
+
+.post-detail-back {
+    font-size: 18px;
+}

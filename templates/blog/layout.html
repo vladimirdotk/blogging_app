@@ -1,0 +1,16 @@
+{% extends 'bootstrap3/bootstrap3.html' %}
+
+{% block bootstrap3_title %} Мои заметки {% endblock %}
+
+{% block bootstrap3_content %}
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/blog.css' %}" />
+
+    <div class="container">
+        <h1 class="page-header">Мои заметки</h1>
+        {% block container %} {% endblock %}
+    </div>
+
+{% endblock %}

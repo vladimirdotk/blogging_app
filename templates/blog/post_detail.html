@@ -1,16 +1,14 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<a href="javascript:history.back()">Назад</a>
-<h1>{{ object.title }}</h1>
-<div>{{ object.created_date }}</div>
-<div>{{ object.body }}</div>
-</body>
-</html>
+{% extends 'blog/layout.html' %}
+{% block bootstrap3_title %} {{ object.title }} {% endblock %}
+
+{% block container %}
+
+    <a class="post-detail-back" href="javascript:history.back()">Назад</a>
+    <div class="post-detail">
+        <h2 class="post-header">{{ object.title }}</h2>
+        <div class="post-date">{{ object.created_date }}</div>
+        <br>
+        <div class="post-body">{{ object.body }}</div>
+    </div>
+
+{% endblock %}
