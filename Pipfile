@@ -11,6 +11,7 @@ django = "==1.11.6"
 pytz = "==2017.2"
 "django-bootstrap3" = "*"
 python-dotenv = "*"
+gunicorn = "*"
 
 
 [dev-packages]
