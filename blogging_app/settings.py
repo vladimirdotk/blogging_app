@@ -38,10 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'debug_toolbar',
     'blog',
     'bootstrap3'
 ]
+
+if DEBUG:
+    INSTALLED_APPS = INSTALLED_APPS + ['debug_toolbar']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -125,8 +127,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
+if DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, "static"),
+    ]
+
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 INTERNAL_IPS = ['127.0.0.1']
