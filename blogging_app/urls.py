@@ -22,7 +22,7 @@ from django.views.decorators.cache import never_cache
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^manage/', admin.site.urls),
     url(r'^$', PostList.as_view(), name='post-list'),
     url(r'^(?P<slug>[-\w]+)/$', PostDetail.as_view(), name='post-detail'),
 ]
