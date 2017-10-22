@@ -1,5 +1,6 @@
 {% extends 'blog/layout.html' %}
 
+{% load bootstrap3 %}
 
 {% block container %}
 
@@ -12,13 +13,38 @@
                 <div class="post-date">{{ post.created_date }}</div>
                 <br>
                 <div class="post-preview">
-                    {{ post.preview|safe }}
+                    {{ post.preview|safe }}<a class="post-read-all" href="{{ post.get_absolute_url }}">Читать далее</a>
                 </div>
-                <a class="post-read-all" href="{{ post.get_absolute_url }}">Читать далее</a>
             </div>
         {% empty %}
             <div>Заметок пока нет</div>
         {% endfor %}
     </div>
+
+    {% if is_paginated %}
+        <ul class="pagination post-pagination">
+
+        {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+        {% else %}
+            <li class="disabled"><span>&laquo;</span></li>
+        {% endif %}
+
+        {% for i in paginator.page_range %}
+            {% if page_obj.number == i %}
+                <li class="active"><span>{{ i }} <span class="sr-only">(текущая)</span></span></li>
+            {% else %}
+                <li><a href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+        {% else %}
+            <li class="disabled"><span>&raquo;</span></li>
+        {% endif %}
+
+        </ul>
+    {% endif %}
 
 {% endblock %}

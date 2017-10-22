@@ -3,7 +3,6 @@
 
 {% block container %}
 
-    <a class="post-detail-back" href="javascript:history.back()">Назад</a>
     <div class="post-detail">
         <h2 class="post-header">{{ object.title }}</h2>
         <div class="post-date">{{ object.created_date }}</div>
@@ -11,6 +10,10 @@
         <div class="post-body">
             {{ object.body|safe }}
         </div>
+    </div>
+
+    <div class="post-detail-back">
+        <a  href="javascript:history.back()">Назад</a>
     </div>
 
 {% endblock %}

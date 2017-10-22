@@ -13,10 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
+from django.conf.urls import url, include, static
 from django.conf import settings
 from django.contrib import admin
 from blog.views import PostList, PostDetail
+from django.contrib.staticfiles.views import serve as serve_static
+from django.views.decorators.cache import never_cache
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -29,3 +32,9 @@ if settings.DEBUG:
     urlpatterns = [
         url(r'^__debug__/', include(debug_toolbar.urls)),
     ] + urlpatterns
+
+
+if settings.DEBUG:
+    urlpatterns = static.static(
+        settings.STATIC_URL, view=never_cache(serve_static)
+    ) + urlpatterns
