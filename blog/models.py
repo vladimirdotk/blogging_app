@@ -1,6 +1,5 @@
 from django.db import models
 from django.core.urlresolvers import reverse
-from django.utils.timezone import datetime
 
 
 class Tag(models.Model):
