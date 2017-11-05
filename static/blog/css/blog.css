@@ -93,3 +93,12 @@ h1 > a:hover {
         width: 1000px;
     }
 }
+
+pre {
+    background-color: inherit;
+    border: none;
+}
+
+.hljs {
+    background-color: inherit;
+}
