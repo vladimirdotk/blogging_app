@@ -23,8 +23,8 @@ from django.views.decorators.cache import never_cache
 
 urlpatterns = [
     url(r'^manage/', admin.site.urls),
-    url(r'^$', PostList.as_view(), name='post-list'),
-    url(r'^(?P<slug>[-\w]+)/$', PostDetail.as_view(), name='post-detail'),
+    url(r'^blog/$', PostList.as_view(), name='post-list'),
+    url(r'^blog/(?P<slug>[-\w]+)/$', PostDetail.as_view(), name='post-detail'),
 ]
 
 if settings.DEBUG:
