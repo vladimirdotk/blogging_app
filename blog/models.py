@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.urlresolvers import reverse
+from autoslug import AutoSlugField
 
 
 class Tag(models.Model):
@@ -21,7 +22,10 @@ class Post(models.Model):
     Blog Posts
     """
     title = models.CharField('заголовок', max_length=256)
-    slug = models.SlugField('url')
+    slug = AutoSlugField(
+        populate_from='title',
+        unique_with='created_date'
+    )
     preview = models.TextField('предпросмотр')
     body = models.TextField('заметка')
     created_date = models.DateTimeField(
