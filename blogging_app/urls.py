@@ -16,15 +16,13 @@ Including another URLconf
 from django.conf.urls import url, include, static
 from django.conf import settings
 from django.contrib import admin
-from blog.views import PostList, PostDetail
 from django.contrib.staticfiles.views import serve as serve_static
 from django.views.decorators.cache import never_cache
 
 
 urlpatterns = [
     url(r'^manage/', admin.site.urls),
-    url(r'^blog/$', PostList.as_view(), name='post-list'),
-    url(r'^blog/(?P<slug>[-\w]+)/$', PostDetail.as_view(), name='post-detail'),
+    url(r'^blog/', include('blog.urls'))
 ]
 
 if settings.DEBUG:
