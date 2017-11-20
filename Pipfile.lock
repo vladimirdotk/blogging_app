@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "eceadb8274e8d08e3ae68544877775c56da2986877073d534e408da6f892b120"
+            "sha256": "e7279dfc0ef0278d38ef27e9cdf8b3e85197de5a33a9668c2de101ecf15c3aab"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -43,13 +43,27 @@
         },
         "django-autoslug": {
             "editable": true,
-            "git": "https://github.com/neithere/django-autoslug.git"
+            "git": "https://github.com/neithere/django-autoslug.git",
+            "ref": "223771076e63c1b50f75fb2a576f2ea4c6bad514"
         },
         "django-bootstrap3": {
             "hashes": [
                 "sha256:9f56fa30a2c32142a2785148816cc4e14e7efc8699c5f87a8cb5be162a81658d"
             ],
             "version": "==9.1.0"
+        },
+        "django-ckeditor": {
+            "hashes": [
+                "sha256:2ce51ac86c332e816a96bfef7b7ca181c2029e18166da46e54b74e7a4301e8b8"
+            ],
+            "version": "==5.3.1"
+        },
+        "django-js-asset": {
+            "hashes": [
+                "sha256:0dd2c5f64f2b24eb8a7270a6a59cb914a03f205335bd0eb6207bf61cf7410828",
+                "sha256:c6637e4f3fef12024564057a48bef484db6491c610273d76d25d8dbe6ecc4ac1"
+            ],
+            "version": "==0.1.1"
         },
         "gunicorn": {
             "hashes": [
@@ -96,10 +110,10 @@
         },
         "django-debug-toolbar": {
             "hashes": [
-                "sha256:0b4d2b1ac49a8bc5604518e8e20f56c1c08c0c4873336107e7c773c42537876b",
-                "sha256:e9f08b94f9423ac76cfc287151182bbaddbe7521ae32bef9f9863e2ac58018d3"
+                "sha256:4af2a4e1e932dadbda197b18585962d4fc20172b4e5a479490bc659fe998864d",
+                "sha256:d9ea75659f76d8f1e3eb8f390b47fc5bad0908d949c34a8a3c4c87978eb40a0f"
             ],
-            "version": "==1.8"
+            "version": "==1.9.1"
         },
         "pytz": {
             "hashes": [

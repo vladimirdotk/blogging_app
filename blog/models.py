@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.urlresolvers import reverse
 from autoslug import AutoSlugField
+from ckeditor.fields import RichTextField
 
 
 class Tag(models.Model):
@@ -26,8 +27,8 @@ class Post(models.Model):
         populate_from='title',
         unique_with='created_date'
     )
-    preview = models.TextField('предпросмотр')
-    body = models.TextField('заметка')
+    preview = RichTextField('предпросмотр')
+    body = RichTextField('заметка')
     created_date = models.DateTimeField(
         null=False, blank=False, verbose_name='дата создания', auto_now_add=True
     )
