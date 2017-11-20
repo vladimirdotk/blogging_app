@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'bootstrap3'
+    'bootstrap3',
+    'ckeditor'
 ]
 
 if DEBUG:
@@ -136,3 +137,9 @@ if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 INTERNAL_IPS = ['127.0.0.1']
+
+CKEDITOR_CONFIGS = {
+    "default": {
+        "toolbar": "full",
+    }
+}
