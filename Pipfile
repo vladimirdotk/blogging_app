@@ -15,6 +15,7 @@ gunicorn = "*"
 pytils = "*"
 django-autoslug = {git = "https://github.com/neithere/django-autoslug.git", editable=true}
 django-ckeditor = "*"
+pymailcloud = {git = "https://github.com/vladimirdotk/PyMailCloud", editable = true}
 
 
 [dev-packages]
