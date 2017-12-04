@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from autoslug import AutoSlugField
 from ckeditor.fields import RichTextField
 

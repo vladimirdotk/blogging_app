@@ -7,15 +7,15 @@ name = "pypi"
 
 [packages]
 
-django = "==1.11.6"
+django = "==2.0.0"
 pytz = "==2017.2"
 "django-bootstrap3" = "*"
 python-dotenv = "*"
 gunicorn = "*"
 pytils = "*"
-django-autoslug = {git = "https://github.com/neithere/django-autoslug.git", editable=true}
+django-autoslug = {git = "https://github.com/vladimirdotk/django-autoslug", editable=true}
 django-ckeditor = "*"
-pymailcloud = {git = "https://github.com/vladimirdotk/PyMailCloud", editable = true}
+pymailcloud = {git = "https://github.com/vladimirdotk/PyMailCloud"}
 
 
 [dev-packages]
