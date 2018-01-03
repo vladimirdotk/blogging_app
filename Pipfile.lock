@@ -1,18 +1,18 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2022baa12b86167e8eaa026ca1102c02e0ae2b679c12e6a57db62ea0dc9d3a65"
+            "sha256": "f55f5160822e8e64cfbb77fff4fa1251ee505fe5c6379a187c9663424d2191e7"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
-            "implementation_version": "3.6.3",
+            "implementation_version": "3.6.4",
             "os_name": "posix",
             "platform_machine": "x86_64",
             "platform_python_implementation": "CPython",
-            "platform_release": "17.2.0",
+            "platform_release": "17.3.0",
             "platform_system": "Darwin",
-            "platform_version": "Darwin Kernel Version 17.2.0: Fri Sep 29 18:27:05 PDT 2017; root:xnu-4570.20.62~3/RELEASE_X86_64",
-            "python_full_version": "3.6.3",
+            "platform_version": "Darwin Kernel Version 17.3.0: Thu Nov  9 18:09:22 PST 2017; root:xnu-4570.31.3~1/RELEASE_X86_64",
+            "python_full_version": "3.6.4",
             "python_version": "3.6",
             "sys_platform": "darwin"
         },
@@ -35,8 +35,11 @@
             "version": "==6.7"
         },
         "django": {
-            "hashes": [],
-            "version": "==2.0.0"
+            "hashes": [
+                "sha256:52475f607c92035d4ac8fee284f56213065a4a6b25ed43f7e39df0e576e69e9f",
+                "sha256:d96b804be412a5125a594023ec524a2010a6ffa4d408e5482ab6ff3cb97ec12f"
+            ],
+            "version": "==2.0.1"
         },
         "django-autoslug": {
             "editable": true,
@@ -50,9 +53,9 @@
         },
         "django-ckeditor": {
             "hashes": [
-                "sha256:2ce51ac86c332e816a96bfef7b7ca181c2029e18166da46e54b74e7a4301e8b8"
+                "sha256:b49eb630a260eb17dd225ea38b42d58fabc9a8dbbc898224c61f9a570c29e961"
             ],
-            "version": "==5.3.1"
+            "version": "==5.4.0"
         },
         "django-js-asset": {
             "hashes": [
@@ -102,10 +105,10 @@
     "develop": {
         "django": {
             "hashes": [
-                "sha256:af18618ce3291be5092893d8522fe3919661bf3a1fb60e3858ae74865a4f07c2",
-                "sha256:9614851d4a7ff8cbd32b73c6076441f377c45a5bbff7e771798fb02c43c31f47"
+                "sha256:52475f607c92035d4ac8fee284f56213065a4a6b25ed43f7e39df0e576e69e9f",
+                "sha256:d96b804be412a5125a594023ec524a2010a6ffa4d408e5482ab6ff3cb97ec12f"
             ],
-            "version": "==2.0"
+            "version": "==2.0.1"
         },
         "django-debug-toolbar": {
             "hashes": [
