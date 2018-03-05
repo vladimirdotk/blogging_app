@@ -7,13 +7,13 @@ name = "pypi"
 
 [packages]
 
-django = "==2.0.1"
+django = "==2.0.2"
 pytz = "==2017.2"
 "django-bootstrap3" = "*"
 python-dotenv = "*"
 gunicorn = "*"
 pytils = "*"
-django-autoslug = {git = "https://github.com/vladimirdotk/django-autoslug", editable=true}
+django-autoslug-iplweb = "*"
 django-ckeditor = "*"
 pymailcloud = {git = "https://github.com/vladimirdotk/PyMailCloud"}
 
