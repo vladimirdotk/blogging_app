@@ -25,7 +25,7 @@ from markdownx import urls as markdownx
 urlpatterns = [
     path('manage/', admin.site.urls),
     path('blog/', include('blog.urls')),
-    url(r'^markdownx/', include(markdownx)),
+    path('markdownx/', include(markdownx))
 ]
 
 if settings.DEBUG:
