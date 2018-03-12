@@ -2,16 +2,16 @@
 {% block bootstrap3_title %} {{ object.title }} {% endblock %}
 
 {% block container %}
-
+{% load markdownify %}
     <div class="post-detail">
         <h2 class="post-header">{{ object.title }}</h2>
         <div class="post-date">{{ object.created_date }}</div>
         <br>
         <div class="post-preview">
-            {{ object.preview|safe }}
+            {{ object.preview|show_markdown|safe }}
         </div>
         <div class="post-body">
-            {{ object.body|safe }}
+            {{ object.body|show_markdown|safe }}
         </div>
     </div>
 

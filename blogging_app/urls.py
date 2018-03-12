@@ -19,11 +19,13 @@ from django.conf import settings
 from django.contrib import admin
 from django.contrib.staticfiles.views import serve as serve_static
 from django.views.decorators.cache import never_cache
+from markdownx import urls as markdownx
 
 
 urlpatterns = [
     path('manage/', admin.site.urls),
-    path('blog/', include('blog.urls'))
+    path('blog/', include('blog.urls')),
+    url(r'^markdownx/', include(markdownx)),
 ]
 
 if settings.DEBUG:

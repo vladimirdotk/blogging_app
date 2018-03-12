@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from autoslug import AutoSlugField
-from ckeditor.fields import RichTextField
+from markdownx.models import MarkdownxField
 
 
 class Tag(models.Model):
@@ -27,8 +27,8 @@ class Post(models.Model):
         populate_from='title',
         unique_with='created_date'
     )
-    preview = RichTextField('предпросмотр')
-    body = RichTextField('заметка')
+    preview = MarkdownxField('предпросмотр')
+    body = MarkdownxField('заметка')
     created_date = models.DateTimeField(
         null=False, blank=False, verbose_name='дата создания', auto_now_add=True
     )
@@ -39,6 +39,7 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'slug': self.slug})
+
 
     class Meta:
         verbose_name = 'запись'
